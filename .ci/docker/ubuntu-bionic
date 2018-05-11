@@ -4,7 +4,7 @@ FROM ubuntu:bionic
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 
 # To run dpkg without interactive dialogue
-DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update -qq
 RUN apt-get install -y \
