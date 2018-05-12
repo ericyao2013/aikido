@@ -6,7 +6,7 @@ ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 RUN apt-get update -qq
 
 # To run dpkg without interactive dialogue
-DEBIAN_FRONTEND=noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get install -y \
     build-essential  \
